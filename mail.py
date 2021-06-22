@@ -43,7 +43,7 @@ for store in game_store:
 
     # Send the message via local SMTP server.
     s = smtplib.SMTP('smtp.gmail.com', 587)
-    s.set_debuglevel(1)
+    # s.set_debuglevel(1)
     s.ehlo()
     s.starttls()
     s.login(fromaddr, PASSWORD)
