@@ -10,7 +10,7 @@ class database:
 
 
 def db_connect():
-    database.db = pymongo.MongoClient(os.environ.get("APP_DB"))
+    database.db = pymongo.MongoClient({{ secret.APP_DB }})
     database.users = database.db.fgn.users
 
 
