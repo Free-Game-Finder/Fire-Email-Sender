@@ -7,8 +7,8 @@ import os
 game_store = [steam]
 
 
-PASSWORD = {{ secret.APP_PASS }}
-fromaddr = {{ secret.APP_EMAIL }}
+PASSWORD = os.environ.get("APP_PASS")
+fromaddr = os.environ.get("APP_EMAIL")
 
 toaddr = [fromaddr]
 cc = []

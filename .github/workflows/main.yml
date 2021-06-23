@@ -20,6 +20,10 @@ jobs:
           pip install flake8 pytest
           if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
       - run: python mail.py
+        env: 
+            APP_EMAIL: ${{ secrets.APP_EMAIL }}
+            APP_PASS: ${{ secrets.APP_PASS }}
+            APP_DB: ${{ secrets.APP_DB }}
       - name: Commit files
         run: |
           git config --local user.email "action@github.com"
