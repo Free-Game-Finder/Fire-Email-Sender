@@ -39,6 +39,9 @@ def get_free_games():
 def add_to_html(html):
 
     free_games = get_free_games()
+    
+    if free_games == []:
+        return false
 
     insert_html = ""
 
