@@ -32,7 +32,7 @@ for store in game_store:
     # Create the body of the message (an HTML version).
     with open(store.html_path(), 'r') as file:
         html = store.add_to_html(file.read())
-        if !html:
+        if not html:
             pass
         else:
 
