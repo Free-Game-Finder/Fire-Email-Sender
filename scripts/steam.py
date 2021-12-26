@@ -41,7 +41,7 @@ def add_to_html(html):
     free_games = get_free_games()
     
     if free_games == []:
-        return false
+        return False
 
     insert_html = ""
 
