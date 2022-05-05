@@ -1,6 +1,6 @@
 import requests
 from scripts import db
-
+import json
 
 free_game_url = 'https://raw.githubusercontent.com/Free-Game-Finder/Steam/main/data/free_game_data.json'
 
@@ -44,6 +44,9 @@ def add_to_html(html):
         return False
 
     insert_html = ""
+    
+    with open('free_steam.json', 'w') as fp:
+        json.dump({"free": free_games}, fp)
 
     for game in free_games:
 
